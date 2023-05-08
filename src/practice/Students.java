@@ -22,23 +22,20 @@ public class Students{
 			switch(num) {
 			case 1 :
 				System.out.println("학생을 등록합니다.");
-				stu.regName();
-				stu.regStuNum();
-				stu.regKor();
-				stu.regMath();
-				stu.regEng();
-				stu.calGrade();
+				stu.reg();
 				System.out.println("등록되었습니다.");
 				break;
 			case 2 :
 				System.out.println("학생을 검색합니다.");
-				stu.search();
+				int result = stu.search();
+				stu.searchPrint(result);
 				break;
 			case 3 :
 				System.out.println("모든 학생을 확인합니다.");
 				stu.viewInfo();
 				break;
 			case 4 :
+				System.out.println("종료합니다.");
 				System.exit(0);
 				break;
 			}

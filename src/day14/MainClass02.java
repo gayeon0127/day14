@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 class Member{
 	private String name, addr;
-
+	
 	public String getName() {return name;}
 	public void setName(String name) {this.name = name;}
 
@@ -15,7 +15,7 @@ class Member{
 public class MainClass02 {
 	public static void main(String[] args) {
 		ArrayList<Member> list = new ArrayList<>();
-		// Member라는 타입만 list에 저장
+		// Member 타입만 list에 저장
 		
 		Member m1 = new Member();
 		// 새로운 객체를 형성하여 원하는 값을 저장
@@ -35,6 +35,7 @@ public class MainClass02 {
 			System.out.println(m.getName());
 			System.out.println(m.getAddr());
 			System.out.println();
+			
 			/*
 			 * 한줄로 쓰기 
 			 * System.out.println(list.get(i).getName());
@@ -49,11 +50,11 @@ public class MainClass02 {
 		}
 		System.out.println();
 		
-		for (Member mm : list) {
+		for (Member m : list) {
+			// list 안에 저장된 값을 member 형태로 받음.
 			// list의 자료형이 Member이기 때문에 member로 받음
-			System.out.println(mm.getName());
-			System.out.println(mm.getAddr());
-			
+			System.out.println(m.getName());
+			System.out.println(m.getAddr());
 		}
 	}
 }
